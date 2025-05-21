@@ -76,10 +76,10 @@ export default function Board({ turn, stats, action }) {
   useEffect(() => {
     const context = myCanvas.current.getContext("2d");
     let tileMap = new Image();
-    tileMap.src = process.env.PUBLIC_URL + "/assets/JKnq-tilemap.png"; // Modificado aquí
+    tileMap.src = process.env.PUBLIC_URL + "/assets/JKnq-tilemap.png";
     tileMap.onload = () => paintBoard(context, tileMap);
 
-    petImage.src = process.env.PUBLIC_URL + "/assets/bicho2.png"; // Modificado aquí
+    petImage.src = process.env.PUBLIC_URL + "/assets/bicho2.png";
     petImage.onload = () => drawImageOnBoard(
       context,
       petImage,
@@ -87,7 +87,7 @@ export default function Board({ turn, stats, action }) {
       petPos.posY
     );
 
-    eggImage.src = process.env.PUBLIC_URL + "/assets/egg.png"; // Modificado aquí
+    eggImage.src = process.env.PUBLIC_URL + "/assets/egg.png";
     eggImage.onload = () => drawImageOnBoard(context, eggImage, 200, 200);
   }, [paintBoard, petImage, eggImage]);
 
